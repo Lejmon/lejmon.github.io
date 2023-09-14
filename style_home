@@ -1,0 +1,53 @@
+/* Základné štýly pre celú stránku */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Hlavička */
+header {
+    background-color: transparent;
+    color: white;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+/* Logo (skryté na začiatku) */
+.logo-container {
+    transform: translateX(200px); /* Presuneme logo mimo obrazovku */
+    opacity: 0; /* Skryjeme logo */
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+/* About Me */
+.about-me {
+    transform: translateY(50px); /* Presuneme About Me časť nad obrazovku */
+    opacity: 0; /* Skryjeme About Me časť */
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+/* Po schrollnutí */
+body.scrolled .logo-container {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+body.scrolled .about-me {
+    transform: translateY(0);
+    opacity: 1;
+}
