@@ -34,20 +34,15 @@ header h1 {
     transition: transform 1s ease, opacity 1s ease;
 }
 
-/* About Me */
+/* About Me (tiež skryté na začiatku) */
 .about-me {
     transform: translateY(50px); /* Presuneme About Me časť nad obrazovku */
     opacity: 0; /* Skryjeme About Me časť */
     transition: transform 1s ease, opacity 1s ease;
 }
 
-/* Po schrollnutí */
-body.scrolled .logo-container {
-    transform: translateX(0);
-    opacity: 1;
-}
-
-body.scrolled .about-me {
+/* Po scrollování sa About Me časť zobrazí */
+.about-me.visible {
     transform: translateY(0);
     opacity: 1;
 }
