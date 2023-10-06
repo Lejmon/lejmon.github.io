@@ -25,3 +25,9 @@ main {
     width: 300px;
     text-align: center;
 }
+
+/* Max width for videos to prevent resizing */
+.video-thumbnail video {
+    max-width: 100%; /* Videá se nebudou zvětšovat přes šířku kontejneru */
+    height: auto;   /* Ponecháváme původní poměr stran videí */
+}
